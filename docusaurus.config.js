@@ -8,12 +8,12 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: 'KPI Rover',
+  tagline: 'Розробка роботізованої платформи',
+  favicon: 'img/logo.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://kpi-rover.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -31,8 +31,8 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'uk-UA',
+    locales: ['uk-UA'],
   },
 
   presets: [
@@ -64,19 +64,19 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/logo.png',
       navbar: {
         title: 'KPI Rover',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Платформа',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -93,7 +93,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Платформа',
                 to: '/docs/intro',
               },
             ],
@@ -106,17 +106,13 @@ const config = {
                 href: 'https://github.com/KPI-Rover',
               },
               {
-                label: 'GitHub Discussions',
-                href: 'https://github.com/orgs/KPI-Rover/discussions',
-              },
-              {
-                label: 'GitHub Projects',
-                href: 'https://github.com/orgs/KPI-Rover/projects/4',
+                label: 'Приєднатись до проєкту',
+                href: 'https://github.com/orgs/KPI-Rover/discussions/11#discussion-7336225',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} KPI Rover, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

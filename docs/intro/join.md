@@ -26,6 +26,6 @@ sidebar_position: 2
 | Напрямок | Посилання на завдання |
 | --- | --- |
 | Розробка електроніки | [Link](https://github.com/KPI-Rover/ecu_hw/issues)|
-| Конструкція | [Link](https://github.com/KPI-Rover/chassis-cad) |
+| Конструкція | [Link](https://github.com/KPI-Rover/chassis-cad/issues) |
 | Розробка вбудованого програмного забезпечення | [Link](https://github.com/KPI-Rover/ecu_sw/issues) |
 | Програмне забезпечення для Raspberry Pi з використанням ROS2 | [Link](https://github.com/KPI-Rover/ros_sw/issues)|

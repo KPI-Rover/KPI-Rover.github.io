@@ -30,3 +30,6 @@ import YouTubeVideo from '@site/src/components/youtube'
 
 ### ExoMy
 - https://github.com/0xD0M1M0/ExoMy
+
+### New link
+- https://kpi-rover.github.io/docs/intro/links

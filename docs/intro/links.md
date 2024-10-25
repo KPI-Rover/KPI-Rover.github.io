@@ -19,6 +19,9 @@ import YouTubeVideo from '@site/src/components/youtube'
 - https://www.theconstruct.ai/
 - https://www.youtube.com/@TheConstruct
 
+## Накова робота Enhancing visual autonomous navigation in row-based crops with effective synthetic data generation
+- https://link.springer.com/article/10.1007/s11119-024-10157-6
+
 ## Проэкти роботів
 ### Jet Propulsion Laboratory Space Robots for Everyone
 - https://jplopensourcerover.com/#!/home

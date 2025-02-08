@@ -74,9 +74,15 @@ const config = {
         items: [
           {
             type: 'docSidebar',
+            sidebarId: 'projectSidebar',
+            position: 'left',
+            label: 'Проєкт',
+          },
+          {
+            type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Платформа',
+            label: 'Документація',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {

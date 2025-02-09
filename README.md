@@ -1,17 +1,29 @@
-# Website
+# Project web page
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This website is built using [Docusaurus](https://docusaurus.io/) and hosted on GitHub Pages.
 
-### Installation
+## How to build locally
 
-```
-$ yarn
-```
+To build and serve the website locally, follow these steps:
 
-### Local Development
-
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+1. **Clone the repository**:
+    ```bash
+    git clone git@github.com:KPI-Rover/KPI-Rover.github.io.git
+    cd KPI-Rover.github.io
+    ```
+2. **Install dependencies:** Make sure you have Node.js installed. Then, run:
+   ```bash
+   npm install
+   ```
+3. **Build the site:**
+   ```bash
+   npm run build
+   ```
+4. **Serve the site locally:**
+   ```bash
+   npm run serve
+   ```
+5. **Develop locally:** If you want to develop and see changes in real-time, you can use:
+    ```bash
+    npm run start
+    ```

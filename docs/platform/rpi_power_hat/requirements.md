@@ -13,3 +13,4 @@
 11. The board should have a green LED connected to +5V to indicate the presence of power.
 12. The printed circuit board should be designed using KiCad EDA (https://www.kicad.org/).
 13. All components of the board should be available for order on the website: https://www.lcsc.com/
+14. All KiCAD library components shoul have field ``LCSC`` that is used to make order.

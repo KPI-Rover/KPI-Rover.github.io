@@ -76,13 +76,13 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'projectSidebar',
             position: 'left',
-            label: 'Проєкт',
+            label: 'Project',
           },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Документація',
+            label: 'Platform',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {

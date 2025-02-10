@@ -26,8 +26,7 @@ This is the core protocol used in both TCP and UART modes.
 | Offset | Size (bytes) | Field         | Description |
 |--------|-------------|---------------|-------------|
 | 0      | 1           | `command_id`   | Unique command identifier |
-| 1      | 1           | `payload_size` | Number of bytes in the payload |
-| 2      | N           | `payload`      | Command-specific data |
+| 1      | N           | `payload`      | Command-specific data |
 
 ## 3. Command Set
 | Command ID | Command Name       | Description          |
@@ -61,7 +60,7 @@ Sets the speed of a specific motor.
 |--------|-------------|------------------|--------|
 | 0      | 1           | command_id       | 0x02   |
 | 1      | 1           | motor_id         | Motor ID (0-3) |
-| 2      | 4           | speed            | Speed in RPM multiplied by 100 |
+| 2      | 4           | speed            | Speed in RPM multiplied by 100 (signed value, negative value means reverse direction) |
 
 **Response**
 | Offset | Size (bytes) | Field Description | Values |
@@ -75,10 +74,10 @@ Sets the speed for all four motors in a single command.
 | Offset | Size (bytes) | Field Description | Values |
 |--------|-------------|------------------|--------|
 | 0      | 1           | command_id       | 0x03   |
-| 1      | 4           | speed_motor_1    | Speed in RPM multiplied by 100 |
-| 5      | 4           | speed_motor_2    | Speed in RPM multiplied by 100 |
-| 9      | 4           | speed_motor_3    | Speed in RPM multiplied by 100 |
-| 13     | 4           | speed_motor_4    | Speed in RPM multiplied by 100 |
+| 1      | 4           | speed_motor_1    | Speed in RPM multiplied by 100 (signed value, negative value means reverse direction) |
+| 5      | 4           | speed_motor_2    | Speed in RPM multiplied by 100 (signed value, negative value means reverse direction) |
+| 9      | 4           | speed_motor_3    | Speed in RPM multiplied by 100 (signed value, negative value means reverse direction) |
+| 13     | 4           | speed_motor_4    | Speed in RPM multiplied by 100 (signed value, negative value means reverse direction) |
 
 **Response**
 | Offset | Size (bytes) | Field Description | Values |
@@ -98,7 +97,7 @@ Retrieves the encoder value for a specific motor.
 | Offset | Size (bytes) | Field Description | Values |
 |--------|-------------|------------------|--------|
 | 0      | 1           | command_id       | 0x04   |
-| 1      | 4           | encoder_value    | Encoder value |
+| 1      | 4           | encoder_value    | Encoder value (signed value, negative value means reverse direction) |
 
 ### get_all_encoders (0x05)
 Retrieves the encoder values for all motors.
@@ -112,8 +111,8 @@ Retrieves the encoder values for all motors.
 | Offset | Size (bytes) | Field Description | Values |
 |--------|-------------|------------------|--------|
 | 0      | 1           | command_id       | 0x05   |
-| 1      | 4           | encoder_value_motor_1 | Encoder value |
-| 5      | 4           | encoder_value_motor_2 | Encoder value |
-| 9      | 4           | encoder_value_motor_3 | Encoder value |
-| 13     | 4           | encoder_value_motor_4 | Encoder value |
+| 1      | 4           | encoder_value_motor_1 | Encoder value (signed value, negative value means reverse direction) |
+| 5      | 4           | encoder_value_motor_2 | Encoder value (signed value, negative value means reverse direction) |
+| 9      | 4           | encoder_value_motor_3 | Encoder value (signed value, negative value means reverse direction) |
+| 13     | 4           | encoder_value_motor_4 | Encoder value (signed value, negative value means reverse direction) |
 

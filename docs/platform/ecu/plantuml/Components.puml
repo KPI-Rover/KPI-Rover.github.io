@@ -1,0 +1,38 @@
+@startuml
+skinparam component {
+  BackgroundColor<<communication>> LightBlue
+  BackgroundColor<<sensor>> LightYellow
+  BackgroundColor<<configuration>> LightGreen
+  BackgroundColor<<control>> Orange
+  BorderColor Black
+  FontColor Black
+}
+
+component "Parameters Database" <<configuration>>
+
+component "TCP Server" <<communication>>
+component "Protocol Handler" <<communication>>
+component "Motors Control" <<control>>
+component "ADC Reader" <<sensor>>
+
+component "IMU Module" <<sensor>>
+component "Compass Module" <<sensor>>
+component "GPS Module" <<sensor>>
+
+component "UDP Client (IMU)" <<communication>>
+component "UDP Client (Compass)" <<communication>>
+component "UDP Client (GPS)" <<communication>>
+component "UDP Client (Voltage)" <<communication>>
+
+[TCP Server] -down-> [Protocol Handler] : "Receive Command"
+[Protocol Handler] -right-> [Parameters Database] : "Write Config / Read State"
+[Motors Control] -up-> [Parameters Database] : "Read Config / Write State"
+[ADC Reader] --> [Parameters Database] : "Write Voltage Data"
+[IMU Module] --> [Parameters Database] : "Read Config / Write Data"
+[Compass Module] --> [Parameters Database] : "Read Config / Write Data"
+[GPS Module] --> [Parameters Database] : "Read Config / Write Data"
+[ADC Reader] -up-> [UDP Client (Voltage)] : "Send Voltage Data"
+[IMU Module] -up-> [UDP Client (IMU)] : "Send IMU Data"
+[Compass Module] -up-> [UDP Client (Compass)] : "Send Compass Data"
+[GPS Module] -up-> [UDP Client (GPS)] : "Send GPS Data"
+@enduml

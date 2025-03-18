@@ -30,10 +30,11 @@
 13. The controller should have the MPU-6050 (IMU) module.
 14. The controller should have a serial interface connector at TTL level with 5V power for external GPS sensor. Connector type: JST PH. 
 15. The controller shopuld have connector for external compas connected over I2C interface. Connector type: JST PH.
-16. The dimensions of the controller board should not exceed 110x190 mm. Preferably, but not necessarily, not exceed 100x100 mm.
+16. The dimensions of the controller board should not exceed 120x190 mm. Preferably, but not necessarily, not exceed 100x100 mm.
 17. The number of PCB layers should not exceed 4. Preferably 2.
 18. The controller board should have 4 holes with a diameter of 3.2 mm at the corners for mounting to the chassis.
-19. All SMD components should be placed on the side of the STM32F407G-DISC1 board connector.
-20. All connectors for connecting modules, signals, and power should be located on the opposite side of the STM32F407G-DISC1 board.
+19. All SMD components should be placed on the opposite side of the STM32F407G-DISC1 board connector.
+20. All connectors for connecting modules, signals, and power should be located on the side of the STM32F407G-DISC1 board.
 21. The printed circuit board should be designed using KiCad EDA (https://www.kicad.org/).
 22. All components of the board should be available for order on the website: https://www.lcsc.com/
+23. The controller should have the Ethernet interface.

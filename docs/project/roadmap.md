@@ -1,13 +1,13 @@
 ---
 sidebar_position: 3
 ---
-# Roadmap проекту
+# The project roadmap
 
-|#| Етап|Опис|
-| --- | --- |--- | 
-| 1 | **Розробка шасі робота** | - Створення легкої у виготовленні конструкції шасі з чотирма моторами, кожен з яких оснащений енкодером для вимірювання швидкості обертання коліс. <br/> - Розробка контролера моторів на базі STM32 з керуванням через послідовний інтерфейс. |
-| 2 | **Інтеграція ROS2 та управління через Bluetooth Gamepad**              | Налаштування мінімальної конфігурації ROS2 на Raspberry Pi для управління шасі робота за допомогою стандартного Bluetooth-джойстика.                   |
-| 3 | **Запуск навігації в приміщенні з використанням лідара**               | Вибір і налаштування одного з фреймворків ROS2 для створення карти приміщення та автономного переміщення між точками А і Б.                            |
-| 4 | **Запуск навігації на відкритому просторі з використанням GPS**        | Вибір та налаштування одного з фреймворків ROS2, який забезпечить автономну навігацію за визначеними маршрутними точками з використанням GPS.          |
-| 5 | **Реалізація навігації в приміщенні з використанням лише камери**      | Вибір відповідного фреймворку для реалізації навігації з використанням тільки камери для створення карти приміщення та автономного пересування.        |
-| 6 | **Запуск профільних проєктів**                                         | Початок роботи над спеціалізованими проєктами на основі готової платформи робота з розширенням її можливостей. |
+|#| Step|Description|
+|--- | --- |--- |
+| 1 | **Development of the robot chassis** | - Creation of an easy-to-manufacture chassis design with four motors, each equipped with an encoder for measuring the speed of rotation of the wheels. <br/> - Development of a motor controller based on STM32 with control via a serial interface. |
+| 2 | **Integration of ROS2 and control via Bluetooth Gamepad** | Setting up the minimum configuration of ROS2 on Raspberry Pi to control the robot chassis using a standard Bluetooth joystick. |
+| 3 | **Launching indoor navigation using lidar** | Selecting and configuring one of the ROS2 frameworks to create a map of the room and autonomous movement between points A and B. |
+| 4 | **Launching outdoor navigation using GPS** | Selecting and configuring one of the ROS2 frameworks that will provide autonomous navigation along specified waypoints using GPS. |
+| 5 | **Implementation of indoor navigation using only the camera** | Selection of an appropriate framework for implementing navigation using only the camera to create a room map and autonomous movement. |
+| 6 | **Launch of profile projects** | Start of work on specialized projects based on a ready-made robot platform with expansion of its capabilities. |

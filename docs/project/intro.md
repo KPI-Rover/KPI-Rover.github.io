@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
 ---
-# Про проєкт
+# About the project
 
-Ти гадаєш, що зробити робота — це складно і дорого? Ні, це не зовсім так. Так, для створення робота від основ потрібно багато знань. Але сучасні фреймворки дозволяють значно прискорити цей процес. Найбільше часу і зусиль займає створення платформи — фізичної конструкції робота, підбір або розробка електроніки та налаштування перших рухів.
+Do you think that making a robot is difficult and expensive? No, it’s not entirely true. Yes, creating a robot from scratch requires a lot of knowledge. But modern frameworks can significantly speed up this process. The most time and effort is spent creating a platform — the physical design of the robot, selecting or developing electronics, and setting up the first movements.
 
-Мета цього проекту — створити таку платформу робота, яку легко буде повторити і зібрати самостійно. Наявність готової платформи має знизити поріг входження у захопливий світ робототехніки. Складність перших кроків може відлякати багатьох зацікавлених, але якщо в людини буде платформа, яка зможе запрацювати вже через кілька днів, це точно привабить більше охочих.
+The goal of this project is to create a robot platform that can be easily repeated and assembled independently. Having a ready-made platform should lower the threshold for entering the exciting world of robotics. The complexity of the first steps can scare off many interested parties, but if a person has a platform that can work in just a few days, it will definitely attract more interested parties.
 
-Уяви: ти за кілька днів збираєш робота, який, як робот-пилосос, може скласти карту твого будинку і пересуватися по ньому з точки А в точку Б, уникаючи перешкод. Цікаво, правда?
+Imagine: in a few days you assemble a robot that, like a robot vacuum cleaner, can map your house and move around it from point A to point B, avoiding obstacles. Interesting, right?
 
-Наступна мета цього проекту — створити навколо цієї платформи студентську спільноту, яка буде її розвивати та виконувати власні проєкти на її основі, розширюючи і масштабуючи її можливості.
+The next goal of this project is to create a student community around this platform that will develop it and carry out their own projects based on it, expanding and scaling its capabilities.
 

@@ -4,70 +4,70 @@ sidebar_position: 2
 
 import YouTubeVideo from '@site/src/components/youtube';
 
-# Завдання
-Тут ви можете знайти перелік завдань, серед яких ви можете обрати завдання собі.
+# Tasks
+Here you can find a list of tasks that you can choose for yourself.
 
-## Розробка електроніки
+## Electronics development
 
-Ми шукаємо студентів, котрі мають бажання взяти участь у розробці друкованих плат.
-Для розробки друкованих плат ми використовуємо [**KiCAD**](https://www.kicad.org/)
+We are looking for students who are willing to participate in development of printed circuit boards.
+For development these boards we use [**KiCAD**](https://www.kicad.org/)
 
-### Плата живлення Raspberry Pi
-Живлення Raspberry Pi від акумулятора потребує стабільного й доволі потужного DC-DC перетворювача.
+### Raspberry Pi power board
+Raspberry PI power from the battery needs to have stable and quite powerful DC-DC converter.
 
-Ми вже розробили перший прототип:
+We have already developed the first prorotype:
 
 ![RPI HAT](../platform/rpi_power_hat/img/rpihat_v1.png)
 
-Але, як і очікувалось, були допущені помилки й з'явились побажання щодо вдосконалення.
+But as expected mistakes were made and wishes were expressed for an improvement.
 
-### Контролер шасі
+### Chassis controller
 
-Для керування моторами робота потрібен контролер шасі. На сьогоднішній день ми використовуємо [BeagleBone Blue](https://www.beagleboard.org/boards/beaglebone-blue). Але він занадто дорогий й останнім часом його дуже складно придбати. Тому ми хочемо розробити власний контролер на базі STM32.
+A chassis controller is required to control the robot's motors. Currently, we're using [BeagleBone Blue](https://www.beagleboard.org/boards/beaglebone-blue). But it's too expensive and impossible to buy lately. That's why we want to develop our own controller on STM32 base.
 
-**Основні функції:**
-* Керування чотирма моторами постійного струму
-* Зчитування показань енкодерів моторів
-* Зчитування показань й калібрування акселерометра
-* Зчитування показань й калібрування компаса
-* Зчитування даних з GPS модуля
-* ПІД регулятор швидкості коліс
-* Ethernet інтерфейс для прийому команд керування
-* Виходи PWM для керування сервоприводами.
+**Main features:**
+* Control of four DC motors 
+* Reading motor encoder readings
+* Accelerometer reading and calibration
+* Compass reading and calibration
+* GPS module data reading
+* PID wheel speed regulator
+* Ethernet interface for receiving control commands
+* PWM outputs for servomotor control.
 
-Функціональна схема: [Архітектура системи](../platform/overview/overview.md).
+Functional diagram: [Архітектура системи](../platform/overview/overview.md).
 
-На першому етапі, так як є ризик зробити багато помилок, ми плануємо розробити плату у вигляді плати розширення до STM32-Discovery. Потім, коли ми вже здобудемо досвід, ми плануємо розробити повноцінну плату з встановленим на ній мікроконтролером STM32.
+At the first stage, since there is a risk of making plenty of mistakes, we're planning to develop the board as a STM32-Discovery expansion board. Then, when we have gained experience, we're going to develop a full-fledged board with STM32 microcontroller installed on it.
 
-## Розробка вбудованого програмного забезпечення 
+## Embedded software development
 
-Контролер шасі потребує програмного забезпечення для STM32. Ми шукаємо команду студентів, які візьмуть участь у його розробці.
-Дивись опис завдання по розробці шасі для того, щоб ознайомитись з основними функціями.
+The chassis controller requires a STM32 software. We're looking for a students team, who will participate in it's development.
+See the chassis design task description for basic functionality.
 
-## Розробка конструкції робота
-На першому етапі ми вирішили зробити якомога простішу конструкцію, щоб збірка не потребувала спеціальних знарядь, а матеріали можна було легко й недорого придбати. Тому наш робот зараз виглядає ось так:
+## Robot design development
+At the first stage, we've decided to make the design as simple as possible, so that the assembly wouldn't reqiure special tools and the materials could be purchased easily and inexpensively. Therefore, our robot now looks like this: 
 ![KPI Rover](./img/kpi_rover.png)
 
-У цієї конструкції основний недолік - цього робота не можна використовувати на дворі при поганих погодних умовах. Також це шасі має погану прохідність, так як нема підвіски.
+In this design, the main disadvantage of this robot - he cannot be used in bad weather conditions. Also, the chassis has poor cross-country ability due to lack of suspension.
 
-Ми шукаємо групу студентів, котра зможе розробити, надрукувати й зібрати для проєкту сучасне шасі робота.
+We're looking for students, who can design, print and assemble a modern robot chassis for this project.
 
-Ось приклад непоганого opensource проєкту:
+Here's an example of a good open source project:
 
 <YouTubeVideo videoId="90HxqwZaWRA" />
 
 ## DevOps and Dev Process
 
-Кількість учасників проєкту зростає. Також зростає кількість вихідного коду й його складність. Тому, щоб спростити процес розробки й запобігти випадкам, коли зміни порушують роботу програмного забезпечення, нам потрібно:
-1. **Описати процес розробки:**
-   * Як приєднатись до проєкту.
-   * Як створити завдання?
-   * Як створити робочу гілку (branch)?
-   * Як створити PR?
-   * Вимоги до комітів
-   * Вимоги до code style
-   * Вимоги до покриття unit-тестами
-   * Вимоги до статичного аналізу коду
-   * й т.п.
-2. **Налаштувати CI використовуючи GitHub Actions**
-3. **Налаштувати Release процес використовуючи GitHub Packages**
+The number of project participants is growing. The amount of source code and it's complexity is also increasing. Therefore, to simplify the development process and prevent changes from software breaking, we need to:
+1. **Describe the development process:**
+   * How to join the project.
+   * How to create a task?
+   * How to create a working branch?
+   * How to create a PR?
+   * Commit requirements
+   * Code style requirements
+   * Unit tests coverage requirements
+   * Static code analysis requirements
+   * etc.
+2. **Configure CI using GitHub Actions**
+3. **Configure Release process using GitHub Packages**

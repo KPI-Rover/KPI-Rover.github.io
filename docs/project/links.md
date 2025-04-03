@@ -5,6 +5,7 @@ import YouTubeVideo from '@site/src/components/youtube'
 
 ### ROS2 Tutorials 
 - https://docs.ros.org/en/jazzy/Tutorials.html
+- Visual Studio Code ROS Extension: https://www.youtube.com/watch?v=PBbEhRf8QjE&ab_channel=Polyhobbyist
 
 ### Articulated Robotics
 Дуже гарні матеріали від **Josh Newans** 

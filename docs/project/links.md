@@ -1,13 +1,14 @@
 import YouTubeVideo from '@site/src/components/youtube'
 
-# Корисні ресурси 
-## Розробкою роботів
+# Useful resources
+## For robots development
 
 ### ROS2 Tutorials 
 - https://docs.ros.org/en/jazzy/Tutorials.html
+- Visual Studio Code ROS Extension: https://www.youtube.com/watch?v=PBbEhRf8QjE&ab_channel=Polyhobbyist
 
 ### Articulated Robotics
-Дуже гарні матеріали від **Josh Newans** 
+Excellent works from **Josh Newans** 
 - https://articulatedrobotics.xyz/
 - https://www.youtube.com/c/ArticulatedRobotics
 
@@ -19,10 +20,10 @@ import YouTubeVideo from '@site/src/components/youtube'
 - https://www.theconstruct.ai/
 - https://www.youtube.com/@TheConstruct
 
-### Наукова робота Enhancing visual autonomous navigation in row-based crops with effective synthetic data generation
+### Sceintific work Enhancing visual autonomous navigation in row-based crops with effective synthetic data generation
 - https://link.springer.com/article/10.1007/s11119-024-10157-6
 
-## Проэкти роботів
+## Robots projects
 ### Jet Propulsion Laboratory Space Robots for Everyone
 - https://jplopensourcerover.com/#!/home
 - https://github.com/nasa-jpl

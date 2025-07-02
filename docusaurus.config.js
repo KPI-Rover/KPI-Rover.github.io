@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'KPI Rover',
-  tagline: 'Розробка роботізованої платформи',
+  tagline: 'Robotic platform development',
   favicon: 'img/logo.ico',
 
   // Set the production url of your site here
@@ -54,8 +54,9 @@ const config = {
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: './src/css/custom.css',
-        },
+  customCss: require.resolve('./src/css/custom.css'),
+},
+
       }),
     ],
   ],
@@ -84,7 +85,7 @@ const config = {
             position: 'left',
             label: 'Platform',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+
           {
             href: 'https://github.com/KPI-Rover',
             label: 'GitHub',
@@ -103,7 +104,7 @@ const config = {
                 href: 'https://github.com/KPI-Rover',
               },
               {
-                label: 'Приєднатись до проєкту',
+                label: 'Join the project',
                 href: 'https://github.com/orgs/KPI-Rover/discussions/11#discussion-7336225',
               },
             ],

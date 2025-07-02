@@ -1,0 +1,115 @@
+---
+title: Our Team
+---
+
+import React from 'react';
+
+export const students = [
+  {
+    id: '1',
+    name: 'Ivan Petrov',
+    linkedin: 'https://linkedin.com/in/ivanpetrov',
+    photo: '/img/student1.jpg',
+    years: '2023-present',
+  },
+  {
+    id: '2',
+    name: 'Olena Shevchenko',
+    linkedin: 'https://linkedin.com/in/olenashevchenko',
+    photo: '/img/student2.jpg',
+    years: '2024',
+  },
+  {
+    id: '3',
+    name: 'Mykola Kovalenko',
+    linkedin: 'https://linkedin.com/in/mykolakovalenko',
+    photo: '/img/student1.jpg',
+    years: '2024-present',
+  },
+  {
+    id: '4',
+    name: 'Iryna Petrenko',
+    linkedin: 'https://linkedin.com/in/irynapetrenko',
+    photo: '/img/student2.jpg',
+    years: '2021-2024',
+  },
+];
+
+export default function Students() {
+  const sortedStudents = [...students].sort((a, b) => {
+    if (a.years.includes('present') && !b.years.includes('present')) return -1;
+    if (!a.years.includes('present') && b.years.includes('present')) return 1;
+    return b.years.localeCompare(a.years);
+  });
+
+  return (
+    <section style={{ padding: '0 5vw' }}>
+            <h2
+        style={{
+          textAlign: 'center',
+          marginBottom: '3rem',  // збільшений відступ після заголовка
+          fontWeight: '700',
+          fontSize: '36px',
+          fontFamily: "'Open Sans', sans-serif",
+        }}
+      >
+        Our Team
+      </h2>
+
+      <div
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'space-between',
+          rowGap: '1.5rem',
+          columnGap: '1rem',
+        }}
+      >
+        {sortedStudents.map(({ id, name, linkedin, photo, years }) => (
+          <div
+            key={id}
+            style={{
+              flex: '0 1 calc(25% - 1rem)',
+              textAlign: 'center',
+            }}
+          >
+            <img
+              src={photo}
+              alt={name}
+              style={{
+                width: 160,
+                height: 160,
+                borderRadius: '50%',
+                objectFit: 'cover',
+                marginBottom: 8,
+                border: '2px solid var(--ifm-color-primary)',
+              }}
+            />
+            <div style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>
+              <a
+                href={linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  textDecoration: 'none',
+                  color: 'var(--ifm-link-color)',
+                }}
+              >
+                <img
+                  src="/img/linkedin-icon.png"
+                  alt="LinkedIn"
+                  style={{ width: 18, height: 18 }}
+                />
+                {name}
+              </a>
+            </div>
+            <div style={{ color: 'gray' }}>{years}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}

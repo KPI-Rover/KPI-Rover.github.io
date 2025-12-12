@@ -36,6 +36,7 @@ This is the core protocol used in both TCP and UART modes.
 | `0x03`     | [`set_all_motors_speed`](#set_all_motors_speed-0x03) | Sets the speed for all four motors in a single command |
 | `0x04`     | [`get_encoder`](#get_encoder-0x04) | Retrieves the encoder value for a specific motor |
 | `0x05`     | [`get_all_encoders`](#get_all_encoders-0x05) | Retrieves the encoder values for all motors |
+| `0x06`     | [`connect_udp`](#connect_udp-0x06) | Connects to UDP port and starts sending odometry data |
 
 ### get_api_version (0x01)
 Retrieves the firmware/API version.
@@ -115,4 +116,38 @@ Retrieves the encoder values for all motors.
 | 5      | 4           | encoder_value_motor_2 | Encoder value (signed value, negative value means reverse direction) |
 | 9      | 4           | encoder_value_motor_3 | Encoder value (signed value, negative value means reverse direction) |
 | 13     | 4           | encoder_value_motor_4 | Encoder value (signed value, negative value means reverse direction) |
+
+### connect_udp (0x06)
+Connects to a UDP port and starts sending odometry/IMU data. The ECU will send UDP packets to the client's IP address and the specified port.
+
+**Request**
+| Offset | Size (bytes) | Field Description | Values |
+|--------|-------------|------------------|--------|
+| 0      | 1           | command_id       | 0x06   |
+| 1      | 4           | port             | UDP port number for odometry data transmission |
+
+**Response**
+| Offset | Size (bytes) | Field Description | Values |
+|--------|-------------|------------------|--------|
+| 0      | 1           | command_id       | 0x06   |
+| 1      | 1           | status           | 1 = OK, 0 = Error |
+
+## 4. UDP Data Format
+When connected via UDP (after sending `connect_udp` command), the ECU sends IMU/odometry data packets to the client's IP address and specified port.
+
+**UDP Packet Format**
+| Offset | Size (bytes) | Field Description | Values/Format |
+|--------|-------------|------------------|---------------|
+| 0      | 1           | imu_id           | IMU sensor ID (uint8_t) |
+| 1      | 2           | packet_number    | Packet sequence number (uint16_t, big-endian) |
+| 3      | 4           | accel_x          | Accelerometer X-axis (float, big-endian) |
+| 7      | 4           | accel_y          | Accelerometer Y-axis (float, big-endian) |
+| 11     | 4           | accel_z          | Accelerometer Z-axis (float, big-endian) |
+| 15     | 4           | gyro_x           | Gyroscope X-axis (float, big-endian) |
+| 19     | 4           | gyro_y           | Gyroscope Y-axis (float, big-endian) |
+| 23     | 4           | gyro_z           | Gyroscope Z-axis (float, big-endian) |
+| 27     | 4           | quat_w           | Quaternion W component (float, big-endian) |
+| 31     | 4           | quat_x           | Quaternion X component (float, big-endian) |
+| 35     | 4           | quat_y           | Quaternion Y component (float, big-endian) |
+| 39     | 4           | quat_z           | Quaternion Z component (float, big-endian) |
 

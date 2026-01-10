@@ -1,0 +1,76 @@
+.vacanciesSection {
+  background-color: #2e8555;
+  padding: 40px 0; 
+  color: white;
+  height: 600px;
+  display: flex;             
+  flex-direction: column;    
+  justify-content: center;   
+  align-items: center; 
+}
+
+.container {
+  padding: 0 20px; 
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center; 
+  margin-bottom: 25px;
+}
+
+.cardContainer {
+  display: flex;
+  gap: 32px; 
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.card {
+  background-color: #d3d3d3;
+  border-radius: 12px;
+  width: 320px; 
+  height: 320px;
+  position: relative;
+  overflow: hidden; 
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 12px;
+  display: block;
+}
+
+.applyButton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px; 
+  padding: 6px 14px;
+  border: none;
+  background-color: white;
+  color: black;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.overlayTitle {
+  position: absolute;
+  top: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-weight: bold;
+  background: rgba(32, 93, 59, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}

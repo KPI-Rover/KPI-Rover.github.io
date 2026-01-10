@@ -1,0 +1,58 @@
+.projectSection {
+  background-color: white;
+  height: 500px;
+  display: flex;
+  align-items: center; /* вертикальне центрування */
+  flex-direction: column;    
+  justify-content: center;   
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;   
+  margin: 0 auto;
+  padding: 0 20px;  
+  gap: 40px;
+
+}
+
+.textBlock {
+  flex: 1; /* займає половину */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+.textBlock p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+p br {
+  display: block;
+  content: "";
+  margin-top: 1rem; /* або 16px, або 1.5rem — як тобі зручно */
+}
+
+
+.imageBlock {
+  flex: 1;           
+  max-width: 600px;  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.imageBlock img {
+  max-height: 400px;   /* обмежуємо висоту */
+  width: auto;
+  max-width: 100%;     /* щоб не виходило за межі контейнера */
+  border-radius: 12px;
+  object-fit: cover;
+}

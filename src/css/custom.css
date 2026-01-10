@@ -5,6 +5,8 @@
  */
 
 /* You can override the default Infima variables here. */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
 :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
@@ -27,4 +29,91 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+.hero__title, .hero__subtitle {
+  color: black;
+}
+
+.navbar {
+  background-color: #2e8555;
+}
+
+
+.navbar__item, .navbar__title {
+  color: white !important;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+/* For .md files*/
+.markdown h1 {
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  color: var(--ifm-color-primary);
+}
+
+.markdown h2 {
+  font-size: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--ifm-color-primary);
+  padding-bottom: 0.5rem;
+}
+
+.markdown h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary-light);
+}
+
+.markdown p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.markdown img {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 600px;
+  width: auto;
+  height: 450px;
+  border-radius: 10px;
+  border: 1.5px solid #205d3b;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+.markdown h3 {
+  position: relative;
+  padding: 1rem 1rem 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .markdown h1 {
+    font-size: 2rem;
+  }
+
+  .markdown h2 {
+    font-size: 1.6rem;
+  }
+
+  .markdown h3 {
+    font-size: 1.3rem;
+  }
+
+  .markdown img {
+    max-width: 100%;
+  }
 }
